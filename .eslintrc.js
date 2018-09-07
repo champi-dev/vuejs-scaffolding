@@ -1,17 +1,23 @@
 module.exports = {
   root: true,
-  env: {
-    node: true
-  },
-  'extends': [
-    'plugin:vue/essential',
-    '@vue/standard'
+  extends: [
+    'plugin:vue/strongly-recommended',
+    '@vue/standard',
+    'prettier',
+    'prettier/standard'
   ],
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  },
+  plugins: ['import', 'prettier', 'standard'],
   parserOptions: {
     parser: 'babel-eslint'
+  },
+  env: {
+    node: true,
+    es6: true,
+    jest: true
+  },
+  rules: {
+    'space-before-function-paren': 0,
+    'new-cap': 0,
+    'prettier/prettier': 2
   }
 }

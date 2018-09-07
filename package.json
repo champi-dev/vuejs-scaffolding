@@ -1,12 +1,14 @@
 {
-  "name": "sengi__kangaroo__operator",
+  "name": "vue-scaffolding",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "p": "prettier --write 'src/**/*.js' && prettier --write 'src/**/*.vue'",
+    "precommit": "yarn p && yarn lint"
   },
   "dependencies": {
     "vue": "^2.5.17",
@@ -20,8 +22,21 @@
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-standard": "^3.0.1",
     "@vue/test-utils": "^1.0.0-beta.20",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint": "^5.3.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^5.0.0-beta.1",
+    "eslint-loader": "^2.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
+    "babel-plugin-transform-imports": "^1.4.1",
+    "prettier": "^1.14.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
